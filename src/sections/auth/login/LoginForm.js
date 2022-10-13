@@ -68,6 +68,7 @@ export default function LoginForm() {
       setUser('');
       setPwd('');
       setSuccess(true);
+      onSubmit();
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
