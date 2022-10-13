@@ -63,11 +63,11 @@ export default function LoginForm() {
       );
       console.log(JSON.stringify(response?.data));
       // console.log(JSON.stringify(response));
-      const accessToken = response?.data?.accessToken;
-      const roles = response?.data?.roles;
+      const token = response?.data?.token;
+      const role = response?.data?.role;
       setUser('');
       setPwd('');
-      setSuccess(true);
+      setSuccess(true); 
       onSubmit();
     } catch (err) {
       if (!err?.response) {
