@@ -33,7 +33,7 @@ const steps = ['Đặt lịch', 'Đang thực hiện', 'Hoàn thành'];
 
 export default function BookingDetail() {
   const { bookingId } = useParams();
-  useEffect(() => { }, [bookingId]);
+  useEffect(() => {}, [bookingId]);
 
   const [checked, setChecked] = useState([0, 2]);
 
@@ -192,7 +192,12 @@ export default function BookingDetail() {
           />
         </Stack>
         <Stack sx={{ width: '20%', p: 2 }}>
-          <Button variant="contained" component={RouterLink} to="/dashboard/schedule" startIcon={<Iconify icon="akar-icons:arrow-back-thick" />}>
+          <Button
+            variant="contained"
+            component={RouterLink}
+            to="/dashboard/schedule"
+            startIcon={<Iconify icon="akar-icons:arrow-back-thick" />}
+          >
             Trở về
           </Button>
           <Stack mb={2} />
