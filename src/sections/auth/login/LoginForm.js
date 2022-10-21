@@ -17,7 +17,7 @@ const LOGIN_URL = '/auth';
 export default function LoginForm() {
   const userRef = useRef();
   const errRef = useRef();
-  const [username, setUser] = useState('');
+  const [email, setUser] = useState('');
   const [password, setPwd] = useState('');
   const [errMsg, setErrMsg] = useState('');
   const [success, setSuccess] = useState(false);
@@ -54,7 +54,7 @@ export default function LoginForm() {
     e.preventDefault();
 
     try {
-      const response = await axios.post(LOGIN_URL, JSON.stringify({ username, password }), {
+      const response = await axios.post(LOGIN_URL, JSON.stringify({ email, password }), {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       });
